@@ -16,7 +16,7 @@ changing_vars = {'CURRENT_YEAR': dt.now().year,
 
 @app.route('/')
 def homepage():
-    return render_template('pages/index-list.html', blog_posts_data=data, changing_vars=changing_vars)
+    return render_template('pages/resume.html', changing_vars=changing_vars)
 
 
 @app.route('/view_post/<puid>')
@@ -45,6 +45,14 @@ def elements_preview():
 # def send_contact_mail():
 #     print(request.form['email'], request.form['message'], request.form['name'])
 #     return homepage
+
+# view CV
+
+@app.route('/raj/resume')
+def view_cv():
+    return render_template('pages/resume.html', changing_vars=changing_vars)
+
+
 
 if __name__ == 'main':
     app.run(host="0.0.0.0", port=5000)
