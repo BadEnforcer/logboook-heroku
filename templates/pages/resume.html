@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<header>
+    {% include "hf-data/postheader.html" %}
+    <title>Resume</title>
+</header>
+
+<body>
+<!-- navigation -->
+{% include "hf-data/nav.html" %}
+<!-- /navigation -->
+
+<section class="section">
+	<div class="container">
+		<article class="row mb-4">
+			<div class="col-lg-10 mx-auto mb-4">
+			</div>
+			<div class="col-lg-10 mx-auto">
+				<div class="content">
+                    {% include "pages/resumedoc.html" %}
+                </div>
+			</div>
+		</article>
+	</div>
+</section>
+
+<!--footer-->
+    {% include "hf-data/footer.html" %}
+
+
+
+</body>
+</html>
